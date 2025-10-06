@@ -11,6 +11,9 @@ h1
 .hback
 {
     background-color: #6FA3AB;
-    padding: 20px;
+    display: inline-block;
+    padding: 10px 20px;
     text-align: center;
+    border-radius: 10px;
+    margin: 20px;
 }
