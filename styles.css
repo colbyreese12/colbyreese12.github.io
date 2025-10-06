@@ -1,10 +1,16 @@
 body
 {
-    background: #E8651A;
+    background: #B1E2EA;
     font-family: Arial, Helvetica, sans-serif;
 }
 h1
 {
-    color: #423B37;
+    color: #1D636E;
+    text-align: center;
+}
+.hback
+{
+    background-color: #6FA3AB;
+    padding: 20px;
     text-align: center;
 }
