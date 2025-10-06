@@ -18,31 +18,7 @@ h1
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
 }
-.about h2
-{
-    background-color: #6FA3AB;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-}
-.skills h2
-{
-    background-color: #6FA3AB;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-}
-.projects h2
-{
-    background-color: #6FA3AB;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-}
-.contact h2
+.header-design
 {
     background-color: #6FA3AB;
     padding: 10px 20px;
