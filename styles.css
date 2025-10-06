@@ -21,9 +21,7 @@ h1
 .about h2
 {
     background-color: #6FA3AB;
-    display: block;
     padding: 10px 20px;
-    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
@@ -31,9 +29,7 @@ h1
 .skills h2
 {
     background-color: #6FA3AB;
-    display: block;
     padding: 10px 20px;
-    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
@@ -41,9 +37,7 @@ h1
 .projects h2
 {
     background-color: #6FA3AB;
-    display: block;
     padding: 10px 20px;
-    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
@@ -51,9 +45,7 @@ h1
 .contact h2
 {
     background-color: #6FA3AB;
-    display: block;
     padding: 10px 20px;
-    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
