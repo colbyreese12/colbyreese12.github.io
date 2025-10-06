@@ -10,10 +10,11 @@ h1
 .hback
 {
     background-color: #6FA3AB;
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     text-align: center;
     border-radius: 10px;
     margin: 20px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: fit-content;
 }
