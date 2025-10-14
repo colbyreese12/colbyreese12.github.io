@@ -26,12 +26,25 @@ h1
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
 }
-.projects { display:flex; flex-wrap:wrap; }
+.projects 
+{ 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 16px;
+    justify-content: flex-start;
+}
 .project 
 {
-    width: 30%;
-    margin: 10px;
+    flex: 1 1 320px;
+    max-width: 420px;
     padding: 20px 10px;
-    background: white; /* pick a color */
-    border-radius: 25%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+.project img, img
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
