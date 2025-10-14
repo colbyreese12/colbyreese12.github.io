@@ -26,6 +26,7 @@ h1
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
 }
+.projects { display:flex; flex-wrap:wrap; }
 .project 
 {
     width: 30%;
