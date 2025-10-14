@@ -7,7 +7,7 @@ h1
 {
     color: #1D636E;
 }
-.hback
+.hback /* Assistance from ChatGPT */
 {
     background-color: #6FA3AB;
     display: block;
@@ -18,7 +18,7 @@ h1
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
 }
-.header-design
+.header-design /* Assistance from ChatGPT */
 {
     background-color: #6FA3AB;
     padding: 10px 20px;
@@ -26,14 +26,14 @@ h1
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: fit-content;
 }
-.projects 
+.projects /* Assistance from ChatGPT */
 { 
     display: flex; 
     flex-wrap: wrap; 
     gap: 16px;
     justify-content: flex-start;
 }
-.project 
+.project  /* Assistance from ChatGPT */
 {
     flex: 1 1 320px;
     max-width: 420px;
@@ -42,7 +42,7 @@ h1
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
 }
-.project img, img
+.project img, img /* Assistance from ChatGPT */
 {
     max-width: 100%;
     height: auto;
