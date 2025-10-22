@@ -48,3 +48,23 @@ h1
     height: auto;
     display: block;
 }
+.contact /* Assistance from ChatGPT */ 
+{
+  float: right;
+  width: 300px;          
+  margin: 0 0 20px 20px;
+  background: #b5e2ff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+}
+.about, .skills, .projects /* Assistance from ChatGPT */
+{
+  margin-right: 340px;
+}
+body::after /* Assistance from ChatGPT */
+{
+  content: "";
+  display: table;
+  clear: both;
+}
