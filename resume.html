@@ -1,1 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Colby Reese — Resume</title>
+
+  <!-- Google Fonts (adjust or remove if you prefer system fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent: #244b57;    /* dark teal similar to screenshot */
+      --muted: #333;
+      --bg: #fff;
+      --maxw: 900px;
+      --gap: 22px;
+    }
+
+    /* Basic reset */
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--muted);
+      background: #f6f6f6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:24px;
+    }
+
+    /* Container to mimic centered resume on page */
+    .sheet{
+      background:var(--bg);
+      max-width:var(--maxw);
+      margin: 18px auto;
+      padding:28px 34px;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    /* Header: name and contact row */
+    header{
+      text-align:center;
+      padding-bottom:10px;
+      margin-bottom:10px;
+      border-bottom:4px solid rgba(36,75,87,0.08);
+    }
+    header h1{
+      margin:6px 0 6px 0;
+      font-family: "Montserrat", "Segoe UI", Roboto, Arial;
+      font-size:26px;
+      letter-spacing:0.4px;
+      color:var(--accent);
+      font-weight:700;
+    }
+    header .meta{
+      font-size:13px;
+      color:#3f3f3f;
+    }
+    header .meta span{margin:0 8px; white-space:nowrap;}
+
+    /* Layout: two-column */
+    .resume-grid{
+      display:grid;
+      grid-template-columns:160px 1fr;
+      gap: var(--gap);
+      align-items:start;
+      margin-top:8px;
+    }
+
+    /* Left column (section titles) */
+    .nav{
+      padding-right:10px;
+    }
+    .section-title{
+      font-weight:700;
+      color:var(--accent);
+      font-size:14px;
+      margin:18px 0 6px 0;
+    }
+
+    /* Right column (content) */
+    .content section{ margin-bottom:14px; }
+    .content h3{
+      margin:0;
+      font-size:15px;
+      font-weight:600;
+      color:#222;
+    }
+    .muted-line{
+      font-size:13px;
+      color:#444;
+      margin-top:4px;
+    }
+
+    ul.bullets{
+      margin:8px 0 0 0;
+      padding-left:18px;
+    }
+    ul.bullets li{
+      margin-bottom:6px;
+      line-height:1.4;
+      font-size:13px;
+    }
+
+    /* Minor layout tweaks for experience date / location row */
+    .item-meta{
+      font-size:13px;
+      color:#555;
+      margin-top:6px;
+    }
+
+    /* Skills list */
+    .skills-list{
+      list-style:none;
+      padding:0;
+      margin:6px 0 0 0;
+      display:block;
+      font-size:13px;
+    }
+    .skills-list li{ margin-bottom:6px; }
+
+    /* Responsive: stack on small screens */
+    @media (max-width:720px){
+      .resume-grid{
+        grid-template-columns: 1fr;
+      }
+      .nav{
+        display:flex;
+        gap:12px;
+        flex-wrap:wrap;
+        border-bottom:1px solid rgba(0,0,0,0.04);
+        padding-bottom:8px;
+      }
+      .section-title{ margin:8px 12px 8px 0; }
+    }
+
+    /* Print styling */
+    @media print{
+      body{background: white; padding:0}
+      .sheet{box-shadow:none; border:none; margin:0; max-width:100%}
+      header h1{font-size:20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet" role="document" aria-label="Resume — Colby Reese">
+    <header>
+      <h1>Colby Reese</h1>
+      <div class="meta" aria-hidden="false">
+        Mount Pleasant, SC <span>|</span>
+        XXX-XXX-XXXX <span>|</span>
+        <a href="mailto:colbydr@email.sc.edu" style="color:inherit;text-decoration:underline;">colbydr@email.sc.edu</a>
+      </div>
+    </header>
+
+    <div class="resume-grid">
+      <!-- Left column with section headings -->
+      <nav class="nav" aria-label="Resume sections">
+        <div class="section-title">Education</div>
+        <div class="section-title">Relevant Experience</div>
+        <div class="section-title">Course Projects</div>
+        <div class="section-title">Skills</div>
+      </nav>
+
+      <!-- Right column with the content -->
+      <main class="content">
+        <!-- Education -->
+        <section aria-labelledby="edu">
+          <h3 id="edu">University of South Carolina - Columbia</h3>
+          <div class="item-meta">Columbia, SC — May 2029</div>
+          <div class="muted-line">Bachelor of Science in Computer Science — Minor: Music</div>
+          <div class="muted-line">GPA: XXX</div>
+          <ul class="bullets" aria-hidden="true">
+            <li>Dean’s Scholar Award</li>
+            <li>Palmetto Fellows Scholarship</li>
+          </ul>
+        </section>
+
+        <!-- Relevant Experience -->
+        <section aria-labelledby="exp">
+          <h3 id="exp">Vicious Biscuit</h3>
+          <div class="item-meta">Mount Pleasant, SC — Employee (Nov 2022 - Jul 2025)</div>
+          <ul class="bullets">
+            <li>Worked as a team in order to maintain a restaurant.</li>
+            <li>Interacted with customers in a helpful manner.</li>
+            <li>Served people in a quick and kind way.</li>
+            <li>Arrived to work on time showing punctuality.</li>
+          </ul>
+
+          <h3 style="margin-top:14px;">High School Marching Band</h3>
+          <div class="item-meta">Mount Pleasant, SC — Section Leader (Apr 2023 - Nov 2024)</div>
+          <ul class="bullets">
+            <li>Led the saxophone section for two years.</li>
+            <li>Assisted members of the section when they needed support.</li>
+            <li>Communicated with the directors on section progress.</li>
+          </ul>
+        </section>
+
+        <!-- Course Projects -->
+        <section aria-labelledby="projects">
+          <h3 id="projects">Capstone Project</h3>
+          <div class="muted-line">• (include info about capstone project once done)</div>
+        </section>
+
+        <!-- Skills -->
+        <section aria-labelledby="skills">
+          <h3 id="skills">Skills</h3>
+          <ul class="skills-list">
+            <li>Proficiency in Java and Python</li>
+            <li>Experience in Lua, HTML, and CSS</li>
+            <li>Worked in Linux and the command line</li>
+            <li>VSCode, Eclipse, BlueJ</li>
+            <li>Spanish</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
 
