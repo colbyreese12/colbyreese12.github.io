@@ -6,184 +6,167 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Colby Reese — Resume</title>
 
-  <!-- Google Fonts (adjust or remove if you prefer system fonts) -->
+  <!-- Optional: Google Fonts (change/remove if you prefer system fonts) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --accent: #244b57;    /* dark teal similar to screenshot */
+      --accent: #244b57;
       --muted: #333;
-      --bg: #fff;
-      --maxw: 900px;
-      --gap: 22px;
+      --page-pad: 40px; /* change this to reduce/increase page padding */
+      --content-max: 1200px;
+      --gutter: 28px;
     }
 
-    /* Basic reset */
     *{box-sizing:border-box}
-    html,body{height:100%;}
     body{
       margin:0;
       font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       color:var(--muted);
-      background: #f6f6f6;
+      background:#fff;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      padding:24px;
+      padding:var(--page-pad);
     }
 
-    /* Container to mimic centered resume on page */
-    .sheet{
-      background:var(--bg);
-      max-width:var(--maxw);
-      margin: 18px auto;
-      padding:28px 34px;
-      border:1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-    }
-
-    /* Header: name and contact row */
+    /* Header */
     header{
       text-align:center;
-      padding-bottom:10px;
-      margin-bottom:10px;
-      border-bottom:4px solid rgba(36,75,87,0.08);
+      margin-bottom:18px;
     }
     header h1{
-      margin:6px 0 6px 0;
+      margin:0;
       font-family: "Montserrat", "Segoe UI", Roboto, Arial;
-      font-size:26px;
-      letter-spacing:0.4px;
+      font-size:32px;
       color:var(--accent);
+      letter-spacing:0.3px;
       font-weight:700;
     }
     header .meta{
-      font-size:13px;
-      color:#3f3f3f;
-    }
-    header .meta span{margin:0 8px; white-space:nowrap;}
-
-    /* Layout: two-column */
-    .resume-grid{
-      display:grid;
-      grid-template-columns:160px 1fr;
-      gap: var(--gap);
-      align-items:start;
       margin-top:8px;
-    }
-
-    /* Left column (section titles) */
-    .nav{
-      padding-right:10px;
-    }
-    .section-title{
-      font-weight:700;
-      color:var(--accent);
-      font-size:14px;
-      margin:18px 0 6px 0;
-    }
-
-    /* Right column (content) */
-    .content section{ margin-bottom:14px; }
-    .content h3{
-      margin:0;
-      font-size:15px;
-      font-weight:600;
-      color:#222;
-    }
-    .muted-line{
       font-size:13px;
       color:#444;
-      margin-top:4px;
+    }
+    header .meta a{ color:inherit; text-decoration:underline; }
+
+    /* Page layout: uses wide content area (not a small square/card) */
+    .page {
+      width:100%;
+      max-width:var(--content-max);
+      margin: 0 auto;
+      padding:0;
     }
 
-    ul.bullets{
-      margin:8px 0 0 0;
-      padding-left:18px;
+    /* Section styling: label sits above its content (not a sidebar) */
+    .section {
+      display:block;
+      margin-bottom:20px;
+      padding-bottom:6px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
-    ul.bullets li{
-      margin-bottom:6px;
-      line-height:1.4;
-      font-size:13px;
+    .section:last-of-type{ border-bottom:none; }
+
+    .section-heading {
+      font-size:15px;
+      color:var(--accent);
+      font-weight:700;
+      margin: 12px 0 8px 0;
     }
 
-    /* Minor layout tweaks for experience date / location row */
-    .item-meta{
-      font-size:13px;
+    .section .title {
+      font-size:16px;
+      font-weight:700;
+      margin: 4px 0;
+      color:#111;
+    }
+    .section .meta {
       color:#555;
-      margin-top:6px;
+      font-size:13px;
+      margin-bottom:8px;
     }
 
-    /* Skills list */
-    .skills-list{
+    ul.bullets {
+      margin:8px 0 0 20px;
+      padding:0;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .skills-list {
       list-style:none;
       padding:0;
       margin:6px 0 0 0;
-      display:block;
-      font-size:13px;
+      font-size:14px;
+      line-height:1.45;
     }
     .skills-list li{ margin-bottom:6px; }
 
-    /* Responsive: stack on small screens */
-    @media (max-width:720px){
-      .resume-grid{
-        grid-template-columns: 1fr;
+    /* Two-column layout for wider screens: section heading remains above block (not in left sidebar) */
+    @media (min-width:990px){
+      .two-col {
+        display:grid;
+        grid-template-columns: 220px 1fr;
+        gap: var(--gutter);
+        align-items:start;
       }
-      .nav{
-        display:flex;
-        gap:12px;
-        flex-wrap:wrap;
-        border-bottom:1px solid rgba(0,0,0,0.04);
-        padding-bottom:8px;
+      /* left column acts as a vertical nav for visual parity but headings are repeated in main column */
+      .left-nav {
+        padding-top:6px;
       }
-      .section-title{ margin:8px 12px 8px 0; }
+      .left-nav .nav-item{
+        margin:18px 0;
+        font-weight:700;
+        color:var(--accent);
+        font-size:14px;
+      }
+      /* hide duplicate top border on left nav */
+      .left-nav .nav-item:first-child{ margin-top:6px; }
     }
 
-    /* Print styling */
-    @media print{
-      body{background: white; padding:0}
-      .sheet{box-shadow:none; border:none; margin:0; max-width:100%}
-      header h1{font-size:20px}
+    /* Make it printable */
+    @media print {
+      body{padding:8px; background: #fff;}
+      header h1{font-size:20px;}
     }
   </style>
 </head>
 <body>
-  <div class="sheet" role="document" aria-label="Resume — Colby Reese">
-    <header>
-      <h1>Colby Reese</h1>
-      <div class="meta" aria-hidden="false">
-        Mount Pleasant, SC <span>|</span>
-        XXX-XXX-XXXX <span>|</span>
-        <a href="mailto:colbydr@email.sc.edu" style="color:inherit;text-decoration:underline;">colbydr@email.sc.edu</a>
-      </div>
-    </header>
+  <header>
+    <h1>Colby Reese</h1>
+    <div class="meta">Mount Pleasant, SC &nbsp; | &nbsp; XXX-XXX-XXXX &nbsp; | &nbsp; <a href="mailto:colbydr@email.sc.edu">colbydr@email.sc.edu</a></div>
+  </header>
 
-    <div class="resume-grid">
-      <!-- Left column with section headings -->
-      <nav class="nav" aria-label="Resume sections">
-        <div class="section-title">Education</div>
-        <div class="section-title">Relevant Experience</div>
-        <div class="section-title">Course Projects</div>
-        <div class="section-title">Skills</div>
-      </nav>
+  <div class="page">
+    <!-- Optional two-column layout on wide screens for visual balance.
+         The left column shows the section names vertically (like your original screenshot),
+         but the actual section headings appear above each content block in the main column. -->
+    <div class="two-col">
+      <aside class="left-nav" aria-hidden="true">
+        <div class="nav-item">Education</div>
+        <div class="nav-item">Relevant Experience</div>
+        <div class="nav-item">Course Projects</div>
+        <div class="nav-item">Skills</div>
+      </aside>
 
-      <!-- Right column with the content -->
-      <main class="content">
+      <main>
         <!-- Education -->
-        <section aria-labelledby="edu">
-          <h3 id="edu">University of South Carolina - Columbia</h3>
-          <div class="item-meta">Columbia, SC — May 2029</div>
-          <div class="muted-line">Bachelor of Science in Computer Science — Minor: Music</div>
-          <div class="muted-line">GPA: XXX</div>
-          <ul class="bullets" aria-hidden="true">
+        <section class="section" id="education">
+          <div class="section-heading">Education</div>
+          <div class="title">University of South Carolina - Columbia</div>
+          <div class="meta">Columbia, SC — May 2029</div>
+          <div class="meta">Bachelor of Science in Computer Science — Minor: Music</div>
+          <ul class="bullets">
             <li>Dean’s Scholar Award</li>
             <li>Palmetto Fellows Scholarship</li>
           </ul>
         </section>
 
         <!-- Relevant Experience -->
-        <section aria-labelledby="exp">
-          <h3 id="exp">Vicious Biscuit</h3>
-          <div class="item-meta">Mount Pleasant, SC — Employee (Nov 2022 - Jul 2025)</div>
+        <section class="section" id="experience">
+          <div class="section-heading">Relevant Experience</div>
+
+          <div class="title">Vicious Biscuit</div>
+          <div class="meta">Mount Pleasant, SC — Employee (Nov 2022 - Jul 2025)</div>
           <ul class="bullets">
             <li>Worked as a team in order to maintain a restaurant.</li>
             <li>Interacted with customers in a helpful manner.</li>
@@ -191,8 +174,10 @@
             <li>Arrived to work on time showing punctuality.</li>
           </ul>
 
-          <h3 style="margin-top:14px;">High School Marching Band</h3>
-          <div class="item-meta">Mount Pleasant, SC — Section Leader (Apr 2023 - Nov 2024)</div>
+          <div style="height:10px;"></div>
+
+          <div class="title">High School Marching Band</div>
+          <div class="meta">Mount Pleasant, SC — Section Leader (Apr 2023 - Nov 2024)</div>
           <ul class="bullets">
             <li>Led the saxophone section for two years.</li>
             <li>Assisted members of the section when they needed support.</li>
@@ -201,14 +186,15 @@
         </section>
 
         <!-- Course Projects -->
-        <section aria-labelledby="projects">
-          <h3 id="projects">Capstone Project</h3>
-          <div class="muted-line">• (include info about capstone project once done)</div>
+        <section class="section" id="projects">
+          <div class="section-heading">Course Projects</div>
+          <div class="title">Capstone Project</div>
+          <div class="meta">(include info about capstone project once done)</div>
         </section>
 
         <!-- Skills -->
-        <section aria-labelledby="skills">
-          <h3 id="skills">Skills</h3>
+        <section class="section" id="skills">
+          <div class="section-heading">Skills</div>
           <ul class="skills-list">
             <li>Proficiency in Java and Python</li>
             <li>Experience in Lua, HTML, and CSS</li>
@@ -222,4 +208,3 @@
   </div>
 </body>
 </html>
-
