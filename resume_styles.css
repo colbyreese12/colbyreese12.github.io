@@ -1,7 +1,13 @@
 .header
 {
-    font-size: 24px;
+    font-size: 12px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-bottom: 10px;
+}
+#educationHeader
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
 }
