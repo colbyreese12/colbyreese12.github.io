@@ -11,8 +11,6 @@
                 margin: 0;
                 width: 100vw;
                 height: 100vh;
-                display: flex;
-                overflow: hidden;
             }
             .resume
             {
@@ -114,92 +112,79 @@
         </style>
     </head>
     <body>
-        <div class="resume">
-            <header class="header">
-                <h1>
-                    Colby Reese
-                </h1>
+        <header class="header">
+            <h1>
+                Colby Reese
+            </h1>
+            <p>
+                Mount Pleasant, SC | XXX-XXX-XXXX | colbydr@email.sc.edu
+            </p>
+        </header>
+        <hr>
+        <section class="education">
+            <h2>
+                Education
+            </h2>
+            <div class="educationInfo">
+                <h3>
+                    University of South Carolina - Columbia
+                </h3>
                 <p>
-                    Mount Pleasant, SC | XXX-XXX-XXXX | colbydr@email.sc.edu
+                    Columbia, SC    May 2029<br>
+                    Bachelor of Science in Computer Science<br>
+                    Minor: Music<br>
+                    GPA: XXX
                 </p>
-            </header>
-            <hr>
-            <section class="education">
-                <h2>
-                    Education
-                </h2>
-                <div class="educationInfo">
-                    <h3>
-                        University of South Carolina - Columbia
-                    </h3>
-                    <p>
-                        Columbia, SC    May 2029<br>
-                        Bachelor of Science in Computer Science<br>
-                        Minor: Music<br>
-                        GPA: XXX
-                    </p>
-                    <h4>
-                        Awards
-                    </h4>
-                    <ul>
-                        <li>Dean's Scholar Award</li>
-                        <li>Palmetto Fellows Scholarship</li>
-                    </ul>
-                    <h5>
-                        Relevant Coursework
-                    </h5>
-                    <ul>
-                        <li>Algorithmic Design II (CSCE 146)</li>
-                        <li>Computing in the Modern World (CSCE 190)</li>
-                        <li>UNIX/LINUX Fundamentals (CSCE 215)</li>
-                    </ul>
-                </div>
-            </section>
-            <hr>
-            <section class="relevantExperience">
-                <h2>
-                    Relevant Experience
-                </h2>
-                <div class="relevantExperienceInfo">
-                    <h3>
-                        Vicious Biscuit - Mount Pleasant, SC<br>
-                        Employee
-                    </h3>
-                    <h4>
-                        November 2022 - July 2025
-                    </h4>
-                    <ul>
-                        <li>Worked as a team in order to maintain a restaurant</li>
-                        <li>Interacted with customers in a helpful manner</li>
-                        <li>Served people in a quick and kind way</li>
-                        <li>Arrived to work on time showing punctuality</li>
-                    </ul>
-                    <h5>
-                        High School Marching Band - Mount Pleasant, SC<br>
-                        Section Leader
-                    </h5>
-                    <h6>
-                        April 2023 - November 2024
-                    </h6>
-                    <ul>
-                        <li>Led the saxophone section for two years</li>
-                        <li>Assisted members of the section if they needed anything</li>
-                        <li>Communicated with the directors on how the section was doing</li>
-                        <li>Earned respect from others</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-        <script>
-            function scaleResume()
-            {
-                const resume = document.querySelector('.resume')
-                const scale = Math.min(window.innerWidth / resume.scrollWidth,
-                                        window.innerHeight / resume.scrollHeight);
-                resume.style.transform = 'scale(${scale})';
-            }
-            window.addEventListener('resize', scaleResume);
-            scaleResume();
-        </script>
+                <h4>
+                    Awards
+                </h4>
+                <ul>
+                    <li>Dean's Scholar Award</li>
+                    <li>Palmetto Fellows Scholarship</li>
+                </ul>
+                <h5>
+                    Relevant Coursework
+                </h5>
+                <ul>
+                    <li>Algorithmic Design II (CSCE 146)</li>
+                    <li>Computing in the Modern World (CSCE 190)</li>
+                    <li>UNIX/LINUX Fundamentals (CSCE 215)</li>
+                </ul>
+            </div>
+        </section>
+        <hr>
+        <section class="relevantExperience">
+            <h2>
+                Relevant Experience
+            </h2>
+            <div class="relevantExperienceInfo">
+                <h3>
+                    Vicious Biscuit - Mount Pleasant, SC<br>
+                    Employee
+                </h3>
+                <h4>
+                    November 2022 - July 2025
+                </h4>
+                <ul>
+                    <li>Worked as a team in order to maintain a restaurant</li>
+                    <li>Interacted with customers in a helpful manner</li>
+                    <li>Served people in a quick and kind way</li>
+                    <li>Arrived to work on time showing punctuality</li>
+                </ul>
+                <h5>
+                    High School Marching Band - Mount Pleasant, SC<br>
+                    Section Leader
+                </h5>
+                <h6>
+                    April 2023 - November 2024
+                </h6>
+                <ul>
+                    <li>Led the saxophone section for two years</li>
+                    <li>Assisted members of the section if they needed anything</li>
+                    <li>Communicated with the directors on how the section was doing</li>
+                    <li>Earned respect from others</li>
+                </ul>
+            </div>
+        </section>
     </body>
 </html>
